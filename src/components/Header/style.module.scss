@@ -1,0 +1,12 @@
+.pageHeader {
+  width: calc(100% - 64px);
+  justify-content: flex-end;
+  padding: 24px 32px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  .customButton {
+    position: relative;
+    right: 0;
+  }
+}

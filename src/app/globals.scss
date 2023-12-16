@@ -1,0 +1,13 @@
+@import "variables.module";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Kanit:wght@100&family=Rowdies:wght@300;400;700&display=swap');
+
+body {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  div, h2, p, button {
+    font-family: 'Rowdies', sans-serif;
+    color: white;
+  }
+}

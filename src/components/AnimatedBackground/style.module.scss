@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 4px;
+  width: 600px;
+  height: 500px;
+  margin: 15% auto;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  .child {
+    background: gray;
+    height: 45px;
+    width: 55px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)
+  }
+}
