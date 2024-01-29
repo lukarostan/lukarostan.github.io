@@ -4,7 +4,6 @@ import Hero from '@/components/Hero';
 import WorkHistory from '@/components/WorkHistory';
 import {workHistory as history} from '@/workHistory';
 import AnimatedBackground from '@/components/AnimatedBackground';
-import NavigationWrapper from '@/components/NavigationWrapper';
 import {useEffect, useRef, useState} from 'react';
 import anime from 'animejs';
 
@@ -51,12 +50,10 @@ export default function Home() {
 
   return (
     <main>
-            <NavigationWrapper onLeftClick={() => leftClick()} onRightClick={() => rightClick()}/>
             <Hero/>
             <AnimatedBackground/>
-            {false && <img src="test.svg" style={{position: 'absolute', inset: '0', zIndex: '-1', width: '100%', height: '100%'}}/>}
-            {false &&<Header/>}
-            {false && <WorkHistory history={history}/>}
+            {false && <Header/>}
+
     </main>
   )
 }

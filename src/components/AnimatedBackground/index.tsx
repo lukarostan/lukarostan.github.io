@@ -14,7 +14,7 @@ export default function AnimatedBackground () {
             easing: 'easeOutElastic(1, .8)',
             delay: anime.stagger(10),
             autoplay: true,
-            loop: true,
+            loop: false,
         });
         const te = anime({
             targets: '.container',
@@ -25,7 +25,7 @@ export default function AnimatedBackground () {
             ],
             direction: 'normal',
             autoplay: true,
-            loop: true,
+            loop: false,
         });
 
     }, []);

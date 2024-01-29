@@ -12,8 +12,8 @@ export default function Subheading() {
             delay: function (el, i) {
                 return i * 50;
             },
-            direction: 'alternate',
-            loop: true
+            direction: 'normal',
+            loop: false
         });
     }, []);
 
