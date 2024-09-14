@@ -11,7 +11,6 @@ type Props = {
 
 export default function WorkHistory({history, visible}: Props): ReactElement {
     const containerRef = useRef()
-    console.log(moment('01-08-2020').format('MMMM, yyyy'));
     const expandedHeight = `${history.length * 92}px`;
     return (
         <div className={clsx(style.workHistory, 'work-history')} style={{height: !visible ? '0' : expandedHeight}}
@@ -24,6 +23,9 @@ export default function WorkHistory({history, visible}: Props): ReactElement {
                         const startTime = moment(convertedStart, 'YYYY/MM/DD HH:mm');
                         const endTime = moment(convertedEnd, 'YYYY/MM/DD HH:mm');
 
+                        console.log("convertedStart", convertedStart)
+                        console.log("convertedEnd", convertedEnd)
+
                         const monthsdiff = endTime.diff(startTime, 'months', true);
                         console.log(monthsdiff)
                         return (
@@ -33,7 +35,7 @@ export default function WorkHistory({history, visible}: Props): ReactElement {
                                 data-id='item'>
                                 <p>{entry.name}</p>
                                 <p>{`${moment(entry.startDate).format('MMMM, yyyy')} - ${moment(entry.endDate).format('MMMM, yyyy')}`}</p>
-                                <p>{monthsdiff.toFixed(0)} months</p>
+                                <p>{monthsdiff <= 12 ? `${monthsdiff.toFixed(0)} months` : `${(Math.floor(monthsdiff / 12)).toFixed(0)} years, ${(monthsdiff % 12).toFixed(0)} months`}</p>
                             </li>
                         );
                     })}

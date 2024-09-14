@@ -20,7 +20,7 @@ export default function ContactCta() {
     return (<>
         <svg className="contact-anim" width="388.92" height="23.1" viewBox="0 0 388.92 23.1" xmlns="http://www.w3.org/2000/svg">
             <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
-               stroke-width="0.25mm" fill="none" style={{stroke:'#ffffff', strokeWidth:'0.5mm', fill:'none'}}>
+               strokeWidth="0.25mm" fill="none" style={{stroke:'#ffffff', strokeWidth:'0.5mm', fill:'none'}}>
                 <path
                     d="M 21.54 23.1 L 4.44 23.1 Q 3.21 23.1 2.205 22.5 Q 1.2 21.9 0.6 20.895 Q 0 19.89 0 18.66 L 0 5.94 Q 0 4.71 0.6 3.705 Q 1.2 2.7 2.205 2.1 Q 3.21 1.5 4.44 1.5 L 21.54 1.5 L 21.54 6.18 L 5.64 6.18 Q 5.16 6.18 4.905 6.42 Q 4.7 6.614 4.66 6.983 A 1.749 1.749 0 0 0 4.65 7.17 L 4.65 17.43 Q 4.65 17.789 4.793 18.022 A 0.768 0.768 0 0 0 4.905 18.165 A 0.822 0.822 0 0 0 5.262 18.371 Q 5.429 18.42 5.64 18.42 L 21.54 18.42 L 21.54 23.1 Z"
                     id="0" vector-effect="non-scaling-stroke"/>

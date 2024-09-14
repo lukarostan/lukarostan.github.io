@@ -20,7 +20,7 @@ export default function Subheading() {
     return (<>
         <svg className="subheading-anim" width="1367.12" height="40.04" viewBox="0 0 1367.12 40.04" xmlns="http://www.w3.org/2000/svg">
             <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
-               stroke-width="0.25mm" fill="none" style={{stroke:'#ffffff', strokeWidth:'0.5mm', fill:'none'}}>
+               strokeWidth="0.25mm" fill="none" style={{stroke:'#ffffff', strokeWidth:'0.5mm', fill:'none'}}>
                 <path
                     d="M 15.24 30.84 L 10.48 30.84 L 0 2.04 L 6.6 2.04 L 12.88 19.2 L 19.16 2.04 L 24.88 2.04 L 31.2 19.2 L 37.48 2.04 L 44.04 2.04 L 33.56 30.84 L 28.8 30.84 L 22 12.32 L 15.24 30.84 Z"
                     id="0" vector-effect="non-scaling-stroke"/>

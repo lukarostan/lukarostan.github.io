@@ -1,0 +1,1 @@
+export const animatedSvgStyle = {stroke: '#ffffff', strokeWidth: '0.5mm', fill: 'none'};

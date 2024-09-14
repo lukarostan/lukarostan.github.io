@@ -4,7 +4,7 @@ import {useEffect} from 'react';
 import style from './style.module.scss'
 import {clsx} from 'clsx';
 
-export default function AnimatedBackground () {
+export default function AnimatedBackground() {
 
     useEffect(() => {
         const anim = anime({
@@ -29,16 +29,13 @@ export default function AnimatedBackground () {
         });
 
     }, []);
-return
     return (
-        <>
-            <div className={clsx(style.container, 'container')} >
+        <div className={clsx(style.container, 'container')}>
             {Array(80).fill(1).map((value, index) => {
                 return (
-                <div key={index} className={clsx(style.child, 'anim-child')}>
-                </div>)
+                    <div key={index} className={clsx(style.child, 'anim-child')}>
+                    </div>)
             })}
-            </div>
-        </>
+        </div>
     )
 }

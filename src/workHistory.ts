@@ -11,9 +11,8 @@ export const workHistory: WorkHistoryItem[] = [
         id: 1,
         name: 'Factory',
         details: 'detailss1s',
-        startDate: '01-05-2020',
-        endDate: '01-08-2020',
-
+        startDate: '05-01-2020',
+        endDate: '08-01-2020',
 
     },
     {
@@ -29,7 +28,15 @@ export const workHistory: WorkHistoryItem[] = [
         name: 'Undabot',
         details: 'detailss3s',
         startDate: '01-23-2023',
-        endDate: '01-01-2024',
+        endDate: '06-30-2024',
+
+    },
+    {
+        id: 4,
+        name: 'True North',
+        details: 'detailss3s',
+        startDate: '07-01-2024',
+        endDate: '09-01-2024',
 
     }
 ]

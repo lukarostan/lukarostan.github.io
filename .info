@@ -4,3 +4,19 @@ font-name: Orbitron variant 900
 heading-font-size: 100 on site, 82px
 subheading-font-size: 50
 cta-font-size: 30
+
+@media screen and (min-width: 1024px){
+    name: size 100
+    subheading:
+    ctas:
+}
+@media screen and (max-width: 1024px){
+    name:
+    subheading:
+    ctas:
+}
+@media screen and (max-width: 600px){
+    name:
+    subheading: 30
+    ctas: 30
+}
