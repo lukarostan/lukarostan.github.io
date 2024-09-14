@@ -19,7 +19,7 @@ export default function Name() {
 
     return (<>
         <svg className="name-anim" width="708" height="82.401" viewBox="0 0 708 82.401" xmlns="http://www.w3.org/2000/svg">
-            <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#ffffff"
+            <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
                stroke-width="0.25mm" fill="none" style={{stroke:'#ffffff', strokeWidth:'0.5mm', fill:'none'}}>
                 <path d="M 72 82.4 L 0 82.4 L 0 10.3 L 15.5 10.3 L 15.5 66.8 L 72 66.8 L 72 82.4 Z" id="0"
                       vector-effect="non-scaling-stroke"/>

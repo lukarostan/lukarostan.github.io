@@ -14,10 +14,18 @@ export default function WorkHistory({history, visible}: Props): ReactElement {
     console.log(moment('01-08-2020').format('MMMM, yyyy'));
     const expandedHeight = `${history.length * 92}px`;
     return (
-        <div className={clsx(style.workHistory, 'work-history')} style={{height: !visible ? '0' : expandedHeight}} ref={containerRef}>
+        <div className={clsx(style.workHistory, 'work-history')} style={{height: !visible ? '0' : expandedHeight}}
+             ref={containerRef}>
             <div className={style.historyContainer}>
                 <ul className={style.workplaceList}>
                     {history.map(entry => {
+                        const convertedStart = new Date(entry.startDate).toISOString();
+                        const convertedEnd = new Date(entry.endDate).toISOString();
+                        const startTime = moment(convertedStart, 'YYYY/MM/DD HH:mm');
+                        const endTime = moment(convertedEnd, 'YYYY/MM/DD HH:mm');
+
+                        const monthsdiff = endTime.diff(startTime, 'months', true);
+                        console.log(monthsdiff)
                         return (
                             <li
                                 key={entry.id}
@@ -25,10 +33,7 @@ export default function WorkHistory({history, visible}: Props): ReactElement {
                                 data-id='item'>
                                 <p>{entry.name}</p>
                                 <p>{`${moment(entry.startDate).format('MMMM, yyyy')} - ${moment(entry.endDate).format('MMMM, yyyy')}`}</p>
-                                <p>{moment
-                                    .duration(moment(entry.endDate, 'YYYY/MM/DD HH:mm')
-                                        .diff(moment(entry.startDate, 'YYYY/MM/DD HH:mm'))
-                                    ).asHours()}</p>
+                                <p>{monthsdiff.toFixed(0)} months</p>
                             </li>
                         );
                     })}

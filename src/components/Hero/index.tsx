@@ -1,11 +1,12 @@
 import {ReactElement, useState} from 'react';
 import style from './style.module.scss';
-import Name from '@/components/Animations/Name';
 import HistoryCta from '@/components/Animations/HistoryCta';
 import Subheading from '@/components/Animations/Subheading';
 import {clsx} from 'clsx';
 import WorkHistory from '@/components/WorkHistory';
 import {workHistory as history} from '@/workHistory';
+import Name from "@/components/Animations/Name";
+import ContactCta from "@/components/Animations/ContactCta";
 
 
 export default function Hero(): ReactElement {
@@ -21,7 +22,7 @@ export default function Hero(): ReactElement {
             <Subheading/>
             <HistoryCta handleHistoryCtaClick={onHistoryClick}/>
             {<WorkHistory history={history} visible={workHistoryVisible}/>}
-            <h3>Contact me</h3>
+            <ContactCta/>
         </div>
     );
 }
