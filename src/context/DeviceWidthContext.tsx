@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useState, useEffect} from "react"
+import React, {createContext, useContext, useState} from "react"
 
 type Props = {
     children: React.ReactNode
@@ -8,12 +8,17 @@ type Context = {
     setWidth: (width: number) => void
 }
 
-// Just find-replace "DeviceWidthContext" with whatever context name you like. (ie. DankContext)
-const DeviceWidthContext = createContext<Context>({width: 0, setWidth: (width: number) => {}})
+
+
+const DeviceWidthContext = createContext<Context>({
+    width: document.documentElement.clientWidth,
+    setWidth: (width: number) => {
+    }
+})
 
 
 export const DeviceWidthContextProvider = ({children}: Props) => {
-    const [width, setWidth] = useState(20)
+    const [width, setWidth] = useState(document.documentElement.clientWidth)
     return (
         <DeviceWidthContext.Provider value={{width, setWidth}}>
             {children}

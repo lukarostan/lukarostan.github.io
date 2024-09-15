@@ -1,1 +1,5 @@
-export const animatedSvgStyle = {stroke: '#ffffff', strokeWidth: '0.5mm', fill: 'none'};
+export const animatedSvgStyle = (strokeWidth?: number) => ({
+    stroke: '#ffffff',
+    strokeWidth: strokeWidth ? `${strokeWidth}mm` : '0.5mm',
+    fill: 'none'
+});

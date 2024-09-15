@@ -1,12 +1,18 @@
 import {useEffect} from 'react';
 import anime from 'animejs/lib/anime.es';
 import style from './style.module.scss'
+import {useDeviceWidthContext} from "@/context/DeviceWidthContext";
+import HistoryCtaMin1024 from "@/components/Animations/HistoryCta/min1024";
+import HistoryCtaMax1024 from "@/components/Animations/HistoryCta/max1024";
+import HistoryCtaMax600 from "@/components/Animations/HistoryCta/max600";
 
 type Props = {
     handleHistoryCtaClick: () => void
 }
 
 export default function HistoryCta({handleHistoryCtaClick}: Props) {
+
+    const {width} = useDeviceWidthContext()
 
     useEffect(() => {
         anime({
@@ -22,10 +28,20 @@ export default function HistoryCta({handleHistoryCtaClick}: Props) {
         });
     }, []);
 
+    switch (true) {
+        case width <= 600:
+            return <HistoryCtaMax600 handleHistoryCtaClick={handleHistoryCtaClick}/>
+        case width <= 1024:
+            return <HistoryCtaMax1024 handleHistoryCtaClick={handleHistoryCtaClick}/>
+        case width > 1024:
+            return <HistoryCtaMin1024 handleHistoryCtaClick={handleHistoryCtaClick}/>
+    }
+
     return (<div className={style.historyCta} onClick={() => handleHistoryCtaClick()}>
-        <svg className="history-cta-anim" width="368.28" height="29.34" viewBox="0 0 368.28 29.34" xmlns="http://www.w3.org/2000/svg">
-            <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
-               strokeWidth="0.25mm" fill="none" style={{stroke:'#ffffff', strokeWidth:'0.5mm', fill:'none'}}>
+        <svg className="history-cta-anim" width="368.28" height="29.34" viewBox="0 0 368.28 29.34"
+             xmlns="http://www.w3.org/2000/svg">
+            <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" fontSize="9pt" stroke="#000"
+               strokeWidth="0.25mm" fill="none" style={{stroke: '#ffffff', strokeWidth: '0.5mm', fill: 'none'}}>
                 <path
                     d="M 16.38 23.1 L 12.51 23.1 L 0 1.5 L 5.4 1.5 L 14.46 17.19 L 23.52 1.5 L 28.89 1.5 L 16.38 23.1 Z"
                     id="0" vector-effect="non-scaling-stroke"/>

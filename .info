@@ -7,16 +7,16 @@ cta-font-size: 30
 
 @media screen and (min-width: 1024px){
     name: size 100
-    subheading:
-    ctas:
+    subheading: size 50
+    ctas: size 30
 }
 @media screen and (max-width: 1024px){
-    name:
-    subheading:
-    ctas:
+    name: size 85
+    subheading: size 26
+    ctas: size 26
 }
 @media screen and (max-width: 600px){
-    name:
-    subheading: 30
-    ctas: 30
+    name: size 75
+    subheading: size 22
+    ctas: size 22
 }

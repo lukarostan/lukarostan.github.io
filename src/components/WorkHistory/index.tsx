@@ -3,6 +3,7 @@ import style from './style.module.scss';
 import {WorkHistoryItem} from '@/workHistory';
 import moment from 'moment';
 import {clsx} from 'clsx';
+import Image from "next/image";
 
 type Props = {
     history: WorkHistoryItem[];
@@ -13,7 +14,7 @@ export default function WorkHistory({history, visible}: Props): ReactElement {
     const containerRef = useRef()
     const expandedHeight = `${history.length * 92}px`;
     return (
-        <div className={clsx(style.workHistory, 'work-history')} style={{height: !visible ? '0' : expandedHeight}}
+        <div className={clsx(style.workHistory, 'work-history')} style={ !visible ? {height: '0', margin: '0'} : {height: expandedHeight, margin: 'unset'}}
              ref={containerRef}>
             <div className={style.historyContainer}>
                 <ul className={style.workplaceList}>
@@ -33,9 +34,12 @@ export default function WorkHistory({history, visible}: Props): ReactElement {
                                 key={entry.id}
                                 className={style.workplaceItem}
                                 data-id='item'>
-                                <p>{entry.name}</p>
-                                <p>{`${moment(entry.startDate).format('MMMM, yyyy')} - ${moment(entry.endDate).format('MMMM, yyyy')}`}</p>
-                                <p>{monthsdiff <= 12 ? `${monthsdiff.toFixed(0)} months` : `${(Math.floor(monthsdiff / 12)).toFixed(0)} years, ${(monthsdiff % 12).toFixed(0)} months`}</p>
+                                    <Image className={style.logo} src={entry.logo} alt={entry.name} width={45} height={45}/>
+                                <div className={style.content}>
+                                    <p>{entry.name}</p>
+                                    <p>{`${moment(entry.startDate).format('MMMM, yyyy')} - ${moment(entry.endDate).format('MMMM, yyyy')}`}</p>
+                                    <p>{monthsdiff <= 12 ? `${monthsdiff.toFixed(0)} months` : `${(Math.floor(monthsdiff / 12)).toFixed(0)} years, ${(monthsdiff % 12).toFixed(0)} months`}</p>
+                                </div>
                             </li>
                         );
                     })}
