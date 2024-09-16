@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero';
-// import AnimatedBackground from '@/components/AnimatedBackground';
+import AnimatedBackground from '@/components/AnimatedBackground';
 import {DeviceWidthContextProvider} from "@/context/DeviceWidthContext";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
             <DeviceWidthContextProvider>
                 <Hero/>
             </DeviceWidthContextProvider>
-            {/*{false && <AnimatedBackground/>}*/}
+            <AnimatedBackground/>
 
         </main>
     )
