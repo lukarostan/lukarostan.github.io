@@ -12,7 +12,7 @@ type Context = {
 
 const DeviceWidthContext = createContext<Context>({
     width: document.documentElement.clientWidth,
-    setWidth: (width: number) => {
+    setWidth: () => {
     }
 })
 

@@ -6,13 +6,11 @@
   overflow: hidden;
   margin: unset;
   transition: height 0.3s ease-in-out;
-  .title {
-    font-size: 24px;
-    line-height: 1.3;
-  }
+
   .historyContainer {
     display: flex;
     flex-direction: row;
+
     .workplaceList {
       .workplaceItem {
         padding: 16px 32px;
@@ -28,6 +26,7 @@
         flex-direction: row;
         align-items: center;
         gap: 12px;
+
         .content {
 
           display: flex;
@@ -43,6 +42,7 @@
     width: calc(100vw - 80px);
     max-width: 360px;
     align-self: center;
+
     .workplaceList {
       width: 100%;
     }

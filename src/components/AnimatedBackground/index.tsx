@@ -7,7 +7,7 @@ import {clsx} from 'clsx';
 export default function AnimatedBackground() {
 
     useEffect(() => {
-        const anim = anime({
+        anime({
             targets: '.anim-child',
             duration: 10000,
             rotate: 360,
@@ -16,7 +16,7 @@ export default function AnimatedBackground() {
             autoplay: true,
             loop: false,
         });
-        const te = anime({
+        anime({
             targets: '.container',
             duration: 4000,
             keyframes: [
