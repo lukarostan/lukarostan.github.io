@@ -13,7 +13,6 @@
 
     .workplaceList {
       .workplaceItem {
-        padding: 16px 32px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5.7px);
         -webkit-backdrop-filter: blur(5.7px);
@@ -45,6 +44,20 @@
 
     .workplaceList {
       width: 100%;
+
+      .workplaceItem {
+        padding: 16px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .workHistory {
+    .workplaceList {
+      .workplaceItem {
+        padding: 16px 20px;
+      }
     }
   }
 }

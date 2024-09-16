@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Luka Rostan',
   description: 'Portfolio page',
 }
+export const dynamic = "force-dynamic";
 
 export default function RootLayout({
   children,
