@@ -20,7 +20,7 @@ export default function HistoryCta({handleHistoryCtaClick}: Props) {
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutSine',
             duration: 2000,
-            delay: function (el, i) {
+            delay: function (_, i) {
                 return i * 250;
             },
             direction: 'normal',

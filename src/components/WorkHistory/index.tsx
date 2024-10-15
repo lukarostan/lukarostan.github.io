@@ -1,9 +1,8 @@
 import {ReactElement} from 'react';
 import style from './style.module.scss';
-import {WorkHistoryItem} from '@/workHistory';
 import moment from 'moment';
 import {clsx} from 'clsx';
-import Image from "next/image";
+import {WorkHistoryItem} from "../../workHistory";
 
 type Props = {
     history: WorkHistoryItem[];
@@ -29,7 +28,7 @@ export default function WorkHistory({history, visible}: Props): ReactElement {
                                 key={entry.id}
                                 className={style.workplaceItem}
                                 data-id='item'>
-                                <Image className={style.logo} src={entry.logo} alt={entry.name} width={45} height={45}/>
+                                <img  src={entry.logo} alt={entry.name} width={45} height={45}/>
                                 <div className={style.content}>
                                     <p>{entry.name}</p>
                                     <p>{`${moment(entry.startDate).format('MMMM, yyyy')} - ${moment(entry.endDate).format('MMMM, yyyy')}`}</p>

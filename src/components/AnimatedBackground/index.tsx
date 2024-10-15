@@ -1,4 +1,3 @@
-"use client"
 import anime from 'animejs/lib/anime.es.js';
 import {useEffect} from 'react';
 import style from './style.module.scss'
@@ -31,7 +30,7 @@ export default function AnimatedBackground() {
     }, []);
     return (
         <div className={clsx(style.container, 'container')}>
-            {Array(80).fill(1).map((value, index) => {
+            {Array(80).fill(1).map((_, index) => {
                 return (
                     <div key={index} className={clsx(style.child, 'anim-child')}>
                     </div>)

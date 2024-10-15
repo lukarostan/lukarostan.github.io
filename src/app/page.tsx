@@ -1,4 +1,3 @@
-"use client"
 import Hero from '@/components/Hero';
 // import AnimatedBackground from '@/components/AnimatedBackground';
 import {DeviceWidthContextProvider} from "@/context/DeviceWidthContext";
