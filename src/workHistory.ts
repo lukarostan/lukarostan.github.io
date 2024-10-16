@@ -10,25 +10,15 @@ export type WorkHistoryItem = {
 export const workHistory: WorkHistoryItem[] = [
     {
         id: 1,
-        name: 'Factory - Frontend Bootcamp ',
+        name: 'True North',
         details: 'details',
-        startDate: '05-01-2020',
-        endDate: '08-01-2020',
-        logo: '/factoryhr_logo.jpg'
-
+        startDate: '07-01-2024',
+        endDate: '09-01-2024',
+        logo: '/tn_hr_logo.jpg'
 
     },
     {
         id: 2,
-        name: 'Async Labs',
-        details: 'details',
-        startDate: '06-23-2021',
-        endDate: '01-23-2023',
-        logo: '/async_labs_logo.jpg'
-
-    },
-    {
-        id: 3,
         name: 'Undabot',
         details: 'details',
         startDate: '01-23-2023',
@@ -37,12 +27,20 @@ export const workHistory: WorkHistoryItem[] = [
 
     },
     {
-        id: 4,
-        name: 'True North 👨‍💻',
+        id: 3,
+        name: 'Async Labs',
         details: 'details',
-        startDate: '07-01-2024',
-        endDate: '09-01-2024',
-        logo: '/tn_hr_logo.jpg'
+        startDate: '06-23-2021',
+        endDate: '01-23-2023',
+        logo: '/async_labs_logo.jpg'
 
-    }
+    },
+    {
+        id: 4,
+        name: 'Factory - Frontend Bootcamp ',
+        details: 'details',
+        startDate: '05-01-2020',
+        endDate: '08-01-2020',
+        logo: '/factoryhr_logo.jpg'
+    },
 ]
