@@ -11,7 +11,7 @@ import {useDeviceWidthContext} from "@/context/DeviceWidthContext";
 import moment from "moment";
 
 const getHistoryWithLatestDate = () => {
-    history[3].endDate = moment().format('MM-DD-YYYY')
+    history[0].endDate = moment().format('MM-DD-YYYY')
     return history
 }
 
