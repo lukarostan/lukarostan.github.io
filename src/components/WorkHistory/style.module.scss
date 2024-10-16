@@ -1,0 +1,69 @@
+.workHistory {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 0;
+  overflow: hidden;
+  margin: unset;
+  transition: height 0.3s ease-in-out;
+
+  .historyContainer {
+    display: flex;
+    flex-direction: row;
+
+    .workplaceList {
+      .workplaceItem {
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.7px);
+        -webkit-backdrop-filter: blur(5.7px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        margin: 4px 0;
+        user-select: none;
+        cursor: pointer;
+        color: #B8B8B8;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+
+        .content {
+
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .workHistory {
+    width: calc(100vw - 80px);
+    max-width: 360px;
+    align-self: center;
+
+    .workplaceList {
+      width: 100%;
+
+      .workplaceItem {
+        padding: 16px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .workHistory {
+    width: calc(100vw - 40px);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .workHistory {
+    .workplaceList {
+      .workplaceItem {
+        padding: 16px 20px;
+      }
+    }
+  }
+}
