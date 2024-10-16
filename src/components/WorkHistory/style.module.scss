@@ -52,6 +52,12 @@
   }
 }
 
+@media screen and (max-width: 390px) {
+  .workHistory {
+    width: calc(100vw - 40px);
+  }
+}
+
 @media screen and (min-width: 600px) {
   .workHistory {
     .workplaceList {

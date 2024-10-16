@@ -8,6 +8,12 @@ import {workHistory as history} from '@/workHistory';
 import Name from "@/components/Animations/Name";
 import ContactCta from "@/components/Animations/ContactCta";
 import {useDeviceWidthContext} from "@/context/DeviceWidthContext";
+import moment from "moment";
+
+const getHistoryWithLatestDate = () => {
+    history[3].endDate = moment().format('MM-DD-YYYY')
+    return history
+}
 
 
 export default function Hero(): ReactElement {
@@ -34,7 +40,7 @@ export default function Hero(): ReactElement {
             <Name/>
             <Subheading/>
             <HistoryCta handleHistoryCtaClick={onHistoryClick}/>
-            {<WorkHistory history={history} visible={workHistoryVisible}/>}
+            {<WorkHistory history={getHistoryWithLatestDate()} visible={workHistoryVisible}/>}
             <ContactCta/>
         </div>
     );

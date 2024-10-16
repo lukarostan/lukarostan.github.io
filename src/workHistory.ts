@@ -10,7 +10,7 @@ export type WorkHistoryItem = {
 export const workHistory: WorkHistoryItem[] = [
     {
         id: 1,
-        name: 'Factory',
+        name: 'Factory - Frontend Bootcamp ',
         details: 'details',
         startDate: '05-01-2020',
         endDate: '08-01-2020',
@@ -38,7 +38,7 @@ export const workHistory: WorkHistoryItem[] = [
     },
     {
         id: 4,
-        name: 'True North',
+        name: 'True North 👨‍💻',
         details: 'details',
         startDate: '07-01-2024',
         endDate: '09-01-2024',

@@ -1,8 +1,10 @@
 import {animatedSvgStyle} from "@/components/constants";
+import style from '../style.module.scss'
+import {clsx} from "clsx";
 
 export default function ContactCtaMin1024() {
 
-    return (<a className={'contact-anim'} href='https://linkedin.com/in/lukarostan' target="_blank">
+    return (<a className={clsx(style.contactCta,'contact-anim')} href='https://linkedin.com/in/lukarostan' target="_blank">
         <svg width="391.02" height="23.1" viewBox="0 0 391.02 23.1" xmlns="http://www.w3.org/2000/svg">
             <g id="svgGroup" strokeLinecap="round" fillRule="evenodd" fontSize="9pt" stroke="#000" strokeWidth="1"
                fill="none" style={animatedSvgStyle(0.4)}>
