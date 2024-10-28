@@ -16,7 +16,7 @@ export default function Subheading() {
             easing: 'easeInOutSine',
             duration: 2000,
             delay: function (_, i) {
-                return i * 50;
+                return i * 40;
             },
             direction: 'normal',
             loop: false

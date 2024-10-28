@@ -1,14 +1,13 @@
 import {ReactElement, useEffect, useState} from 'react';
 import style from './style.module.scss';
-import HistoryCta from '@/components/Animations/HistoryCta';
 import Subheading from '@/components/Animations/Subheading';
 import {clsx} from 'clsx';
 import WorkHistory from '@/components/WorkHistory';
 import {workHistory as history} from '@/workHistory';
 import Name from "@/components/Animations/Name";
-import ContactCta from "@/components/Animations/ContactCta";
 import {useDeviceWidthContext} from "@/context/DeviceWidthContext";
 import moment from "moment";
+import Button from '@/components/Button';
 
 const getHistoryWithLatestDate = () => {
     history[0].endDate = moment().format('MM-DD-YYYY')
@@ -39,9 +38,9 @@ export default function Hero(): ReactElement {
         <div className={clsx(style.hero, 'hero')}>
             <Name/>
             <Subheading/>
-            <HistoryCta handleHistoryCtaClick={onHistoryClick}/>
+            <Button title="View my work history" onClick={onHistoryClick} extraClass={style.animateAppearance}></Button>
             {<WorkHistory history={getHistoryWithLatestDate()} visible={workHistoryVisible}/>}
-            <ContactCta/>
+            <Button title="Contact me on LinkedIn" href='https://linkedin.com/in/lukarostan' extraClass={style.animateAppearance}></Button>
         </div>
     );
 }

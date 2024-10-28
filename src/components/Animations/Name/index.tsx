@@ -16,7 +16,7 @@ export default function Name() {
             easing: 'easeInOutSine',
             duration: 2000,
             delay: function (_, i) {
-                return i * 250;
+                return i * 100;
             },
             direction: 'normal',
             loop: false
