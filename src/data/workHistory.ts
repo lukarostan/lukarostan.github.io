@@ -34,7 +34,7 @@ export const workHistory: WorkHistoryItem[] = [
   },
   {
     id: 4,
-    name: 'Factory - Frontend Bootcamp ',
+    name: 'Factory - FE Bootcamp',
     details: 'details',
     startDate: '05-01-2020',
     endDate: '08-01-2020',
