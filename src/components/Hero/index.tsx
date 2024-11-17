@@ -1,14 +1,16 @@
 import style from './style.module.scss';
 import { clsx } from 'clsx';
 import moment from 'moment';
-import { ReactElement, useEffect, useState } from 'react';
+import { ReactElement, useEffect } from 'react';
 
+import AnimatedList from '@/components/AnimatedList';
 import Name from '@/components/Animations/Name';
 import Subheading from '@/components/Animations/Subheading';
 import Button from '@/components/Button';
-import WorkHistory from '@/components/WorkHistory';
 import { useDeviceWidthContext } from '@/context/DeviceWidthContext';
-import { workHistory as history } from '@/workHistory';
+import { technologies } from '@/data/technologies.ts';
+import { workHistory as history } from '@/data/workHistory.ts';
+import { projects } from '@/data/projects.ts';
 
 const getHistoryWithLatestDate = () => {
   history[0].endDate = moment().format('MM-DD-YYYY');
@@ -16,8 +18,6 @@ const getHistoryWithLatestDate = () => {
 };
 
 export default function Hero(): ReactElement {
-  const [workHistoryVisible, setWorkHistoryVisible] = useState(false);
-
   const { setWidth } = useDeviceWidthContext();
 
   useEffect(() => {
@@ -30,20 +30,24 @@ export default function Hero(): ReactElement {
     });
     return window.removeEventListener('resize', () => setWidth);
   });
-  const onHistoryClick = () => {
-    setWorkHistoryVisible(!workHistoryVisible);
-  };
+
+  // todo: make multiple open lists look better
+  // todo: fix background height on desktop with opened lists
 
   return (
     <div className={clsx(style.hero, 'hero')}>
       <Name />
       <Subheading />
-      <Button title="View my work history" onClick={onHistoryClick} extraClass={style.animateAppearance}></Button>
-      {<WorkHistory history={getHistoryWithLatestDate()} visible={workHistoryVisible} />}
-      <Button
-        title="Contact me on LinkedIn"
-        href="https://linkedin.com/in/lukarostan"
-        extraClass={style.animateAppearance}></Button>
+      <div className={'content-wrapper'}>
+        <AnimatedList data={projects} ctaLabel={'Projects'}></AnimatedList>
+        <AnimatedList data={technologies} ctaLabel={'Technologies'}></AnimatedList>
+        <AnimatedList data={getHistoryWithLatestDate()} ctaLabel={'Work History'}></AnimatedList>
+
+        <Button
+          title="Contact me on LinkedIn"
+          href="https://linkedin.com/in/lukarostan"
+          extraClass={style.animateAppearance}></Button>
+      </div>
     </div>
   );
 }
