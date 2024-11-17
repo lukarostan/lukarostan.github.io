@@ -22,3 +22,23 @@ body {
     opacity: 100%;
   }
 }
+
+@mixin clamp-line {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+@mixin animate-appearance {
+  opacity: 0;
+  animation-name: make-opaque;
+  animation-delay: 3000ms;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.animateAppearance {
+  @include animate-appearance
+}

@@ -11,6 +11,12 @@
   }
 }
 
+.workHistoryWrapper {
+  margin: unset;
+  display: flex;
+  flex-direction: column;
+}
+
 .animateAppearance {
   opacity: 0;
   animation-name: make-opaque;
