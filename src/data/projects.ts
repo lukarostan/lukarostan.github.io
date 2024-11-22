@@ -10,7 +10,7 @@ export const projects: WorkHistoryItem[] = [
     id: 1,
     name: 'Time tracker',
     details: 'https://lukarostan.github.io/time-tracker/',
-    logo: '/react_logo.png',
+    logo: '/next_logo.svg',
   },
   {
     id: 2,
