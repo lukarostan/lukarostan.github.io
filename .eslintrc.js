@@ -22,6 +22,10 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/no-danger': 0,
+    '@typescript-eslint/no-explicit-any': 'off',
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-key': 'off',
     'no-restricted-syntax': 0,
     'class-methods-use-this': 0,
     'no-prototype-builtins': 0,

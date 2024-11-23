@@ -8,9 +8,9 @@ import Name from '@/components/Animations/Name';
 import Subheading from '@/components/Animations/Subheading';
 import Button from '@/components/Button';
 import { useDeviceWidthContext } from '@/context/DeviceWidthContext';
+import { projects } from '@/data/projects.ts';
 import { technologies } from '@/data/technologies.ts';
 import { workHistory as history } from '@/data/workHistory.ts';
-import { projects } from '@/data/projects.ts';
 
 const getHistoryWithLatestDate = () => {
   history[0].endDate = moment().format('MM-DD-YYYY');

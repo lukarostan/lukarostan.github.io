@@ -14,17 +14,20 @@ type AnimatedListItemProps = { entry: AnimatedListItem };
 export const AnimatedListItem = ({ entry }: AnimatedListItemProps) => {
   // TODO: refactor by entry type
   const isWorkHistory = entry.startDate && entry.endDate;
-  const isProject = entry.details.startsWith('http')
+  const isProject = entry.details.startsWith('http');
 
   if (!isWorkHistory) {
     return (
       <li key={entry.id} className={style.animatedListItem} data-id="item">
         <img src={entry.logo} alt={entry.name} width={45} height={45} />
         <div className={style.content}>
-          {
-            isProject ? <a className={style.name} target='_blank' href={entry.details}>{entry.name}</a> :
-          <p className={style.name}>{entry.name}</p>
-          }
+          {isProject ? (
+            <a className={style.name} target="_blank" href={entry.details}>
+              {entry.name}
+            </a>
+          ) : (
+            <p className={style.name}>{entry.name}</p>
+          )}
         </div>
       </li>
     );

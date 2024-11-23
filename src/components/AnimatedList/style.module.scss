@@ -11,10 +11,8 @@
 
   .listContainer {
     display: flex;
-
   }
 }
-
 
 @media screen and (max-width: 600px) {
   .workHistory {
@@ -25,7 +23,6 @@
     .listContainer {
       flex-direction: column;
     }
-
   }
 }
 
@@ -37,11 +34,9 @@
 
 @media screen and (min-width: 600px) {
   .workHistory {
-
     .listContainer {
       flex-direction: column;
     }
-
   }
 }
 
