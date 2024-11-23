@@ -1,4 +1,5 @@
 import style from './style.module.scss';
+import { clsx } from 'clsx';
 import moment from 'moment';
 
 export type AnimatedListItem = {
@@ -18,16 +19,14 @@ export const AnimatedListItem = ({ entry }: AnimatedListItemProps) => {
 
   if (!isWorkHistory) {
     return (
-      <li key={entry.id} className={style.animatedListItem} data-id="item">
+      <li
+        key={entry.id}
+        onClick={() => isProject && window.open(entry.details, '_blank')}
+        className={clsx(style.animatedListItem, isProject ? style.clickable : '')}
+        data-id="item">
         <img src={entry.logo} alt={entry.name} width={45} height={45} />
         <div className={style.content}>
-          {isProject ? (
-            <a className={style.name} target="_blank" href={entry.details}>
-              {entry.name}
-            </a>
-          ) : (
-            <p className={style.name}>{entry.name}</p>
-          )}
+          <p className={style.name}>{entry.name}</p>
         </div>
       </li>
     );

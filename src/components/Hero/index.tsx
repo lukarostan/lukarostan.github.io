@@ -48,29 +48,35 @@ export default function Hero(): ReactElement {
         <AnimatedList
           data={projects}
           isListVisible={visibleLists.projects}
-          setIsListActive={() => setVisibleLists({
-            projects: true,
-            technologies: false,
-            history: false,
-          })}
+          setIsListActive={() =>
+            setVisibleLists((prevState) => ({
+              projects: !prevState.projects,
+              technologies: false,
+              history: false,
+            }))
+          }
           ctaLabel={'Projects'}></AnimatedList>
         <AnimatedList
           data={technologies}
           isListVisible={visibleLists.technologies}
-          setIsListActive={() => setVisibleLists({
-            projects: false,
-            technologies: true,
-            history: false,
-          })}
+          setIsListActive={() =>
+            setVisibleLists((prevState) => ({
+              projects: false,
+              technologies: !prevState.technologies,
+              history: false,
+            }))
+          }
           ctaLabel={'Technologies'}></AnimatedList>
         <AnimatedList
           data={getHistoryWithLatestDate()}
           isListVisible={visibleLists.history}
-          setIsListActive={() => setVisibleLists({
-            projects: false,
-            technologies: false,
-            history: true,
-          })}
+          setIsListActive={() =>
+            setVisibleLists((prevState) => ({
+              projects: false,
+              technologies: false,
+              history: !prevState.history,
+            }))
+          }
           ctaLabel={'Work History'}></AnimatedList>
 
         <Button
