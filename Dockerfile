@@ -1,4 +1,4 @@
-FROM node:14.21.1 as builder
+FROM node:18.18.2 as builder
 
 WORKDIR /usr/app
 
@@ -20,3 +20,5 @@ EXPOSE 80 443
 COPY --from=builder /usr/app/dist /usr/share/nginx/html
 
 COPY --from=builder /usr/app/build-resources/nginx.conf /etc/nginx/conf.d/default.conf
+
+CMD ["nginx", "-g", "daemon off;"]
