@@ -19,14 +19,13 @@ type Props = {
 };
 
 export default function AnimatedList({ data, ctaLabel }: Props): ReactElement {
+  const { width } = useDeviceWidthContext();
+  const [isListVisible, setIsListActive] = useState(false);
+
   if (!data) {
     return <></>;
   }
   let expandedHeight = `${data.length * 92}px`;
-
-  const [isListVisible, setIsListActive] = useState(false);
-
-  const { width } = useDeviceWidthContext();
 
   if (width > 1024) {
     expandedHeight = '92px';
