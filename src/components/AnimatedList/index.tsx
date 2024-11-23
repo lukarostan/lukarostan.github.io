@@ -1,6 +1,6 @@
 import style from './style.module.scss';
 import { clsx } from 'clsx';
-import { Fragment, ReactElement, useState } from 'react';
+import { Fragment, ReactElement } from 'react';
 
 import { AnimatedListItem } from '@/components/AnimatedList/AnimatedListItem';
 import Button from '@/components/Button';
@@ -16,11 +16,13 @@ type Props = {
     endDate?: string;
   }[];
   ctaLabel: string;
+  isListVisible: boolean;
+  setIsListActive: (arg0: boolean) => void;
 };
 
-export default function AnimatedList({ data, ctaLabel }: Props): ReactElement {
+export default function AnimatedList({ data, ctaLabel, isListVisible, setIsListActive }: Props): ReactElement {
   const { width } = useDeviceWidthContext();
-  const [isListVisible, setIsListActive] = useState(false);
+
 
   if (!data) {
     return <></>;

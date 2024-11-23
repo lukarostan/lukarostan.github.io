@@ -1,7 +1,7 @@
 import style from './style.module.scss';
 import { clsx } from 'clsx';
 import moment from 'moment';
-import { ReactElement, useEffect } from 'react';
+import { ReactElement, useEffect, useState } from 'react';
 
 import AnimatedList from '@/components/AnimatedList';
 import Name from '@/components/Animations/Name';
@@ -31,6 +31,12 @@ export default function Hero(): ReactElement {
     return window.removeEventListener('resize', () => setWidth);
   });
 
+  const [visibleLists, setVisibleLists] = useState({
+    projects: false,
+    technologies: false,
+    history: false,
+  });
+
   // todo: make multiple open lists look better
   // todo: fix background height on desktop with opened lists
 
@@ -39,9 +45,33 @@ export default function Hero(): ReactElement {
       <Name />
       <Subheading />
       <div className={'content-wrapper'}>
-        <AnimatedList data={projects} ctaLabel={'Projects'}></AnimatedList>
-        <AnimatedList data={technologies} ctaLabel={'Technologies'}></AnimatedList>
-        <AnimatedList data={getHistoryWithLatestDate()} ctaLabel={'Work History'}></AnimatedList>
+        <AnimatedList
+          data={projects}
+          isListVisible={visibleLists.projects}
+          setIsListActive={() => setVisibleLists({
+            projects: true,
+            technologies: false,
+            history: false,
+          })}
+          ctaLabel={'Projects'}></AnimatedList>
+        <AnimatedList
+          data={technologies}
+          isListVisible={visibleLists.technologies}
+          setIsListActive={() => setVisibleLists({
+            projects: false,
+            technologies: true,
+            history: false,
+          })}
+          ctaLabel={'Technologies'}></AnimatedList>
+        <AnimatedList
+          data={getHistoryWithLatestDate()}
+          isListVisible={visibleLists.history}
+          setIsListActive={() => setVisibleLists({
+            projects: false,
+            technologies: false,
+            history: true,
+          })}
+          ctaLabel={'Work History'}></AnimatedList>
 
         <Button
           title="Contact me on LinkedIn"
