@@ -1,6 +1,6 @@
 import style from './style.module.scss';
 import { clsx } from 'clsx';
-import moment from 'moment';
+// import moment from 'moment';
 import { ReactElement, useEffect, useState } from 'react';
 
 import AnimatedList from '@/components/AnimatedList';
@@ -13,8 +13,8 @@ import { technologies } from '@/data/technologies.ts';
 import { workHistory as history } from '@/data/workHistory.ts';
 
 const getHistoryWithLatestDate = () => {
-  history[0].endDate = moment().format('MM-DD-YYYY');
   return history;
+  // history[0].endDate = moment().format('MM-DD-YYYY');
 };
 
 export default function Hero(): ReactElement {

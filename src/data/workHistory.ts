@@ -13,7 +13,7 @@ export const workHistory: WorkHistoryItem[] = [
     name: 'True North',
     details: 'details',
     startDate: '07-01-2024',
-    endDate: '09-01-2024',
+    endDate: '01-01-2025',
     logo: '/tn_hr_logo.jpg',
   },
   {
