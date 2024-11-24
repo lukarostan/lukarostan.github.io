@@ -27,7 +27,7 @@ export default function AnimatedList({ data, ctaLabel, isListVisible, setIsListA
   if (!data) {
     return <></>;
   }
-  let expandedHeight = `${data.length * 92}px`;
+  let expandedHeight = `${data.length * 87}px`;
 
   if (width > 1024) {
     expandedHeight = '92px';
