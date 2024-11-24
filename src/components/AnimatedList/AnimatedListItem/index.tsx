@@ -31,9 +31,15 @@ export const AnimatedListItem = ({ entry }: AnimatedListItemProps) => {
       </li>
     );
   }
+  console.log('entry', entry.startDate);
 
-  const convertedStart = !entry.startDate ? '' : new Date(entry.startDate).toISOString();
-  const convertedEnd = !entry.endDate ? '' : new Date(entry.endDate).toISOString();
+  const convertedStart = !entry.startDate
+    ? ''
+    : moment(entry.startDate, 'MM-DD-YYYY').utc().format('YYYY-MM-DDTHH:mm:ss.SSS[Z]');
+  const convertedEnd = !entry.endDate
+    ? ''
+    : moment(entry.endDate, 'MM-DD-YYYY').utc().format('YYYY-MM-DDTHH:mm:ss.SSS[Z]');
+  console.log('converted', convertedStart);
   const startTime = moment(convertedStart, 'YYYY/MM/DD HH:mm');
   const endTime = moment(convertedEnd, 'YYYY/MM/DD HH:mm');
 
