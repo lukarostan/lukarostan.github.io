@@ -10,14 +10,22 @@ export type WorkHistoryItem = {
 export const workHistory: WorkHistoryItem[] = [
   {
     id: 1,
-    name: 'True North',
+    name: 'Infinum',
     details: 'details',
-    startDate: '07-01-2024',
-    endDate: '01-01-2025',
-    logo: '/tn_hr_logo.jpg',
+    startDate: '07-02-2025',
+    endDate: '',
+    logo: '/infinum_logo.jpeg',
   },
   {
     id: 2,
+    name: 'True North',
+    details: 'details',
+    startDate: '07-01-2024',
+    endDate: '07-02-2025',
+    logo: '/tn_hr_logo.jpg',
+  },
+  {
+    id: 3,
     name: 'Undabot',
     details: 'details',
     startDate: '01-23-2023',
@@ -25,7 +33,7 @@ export const workHistory: WorkHistoryItem[] = [
     logo: '/undabot_logo.jpg',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Async Labs',
     details: 'details',
     startDate: '06-23-2021',
@@ -33,7 +41,7 @@ export const workHistory: WorkHistoryItem[] = [
     logo: '/async_labs_logo.jpg',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Factory - FE Bootcamp',
     details: 'details',
     startDate: '05-01-2020',
